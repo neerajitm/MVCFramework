@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+
+
+<body>
+    <style>
+        .css-treeview ul,
+        .css-treeview li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .css-treeview input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .css-treeview {
+            font: normal 11px "Segoe UI", Arial, Sans-serif;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+            .css-treeview a {
+                color: #00f;
+                text-decoration: none;
+            }
+
+                .css-treeview a:hover {
+                    text-decoration: underline;
+                }
+
+            .css-treeview input + label + ul {
+                margin: 0 0 0 22px;
+            }
+
+            .css-treeview input ~ ul {
+                display: none;
+            }
+
+            .css-treeview label,
+            .css-treeview label::before {
+                cursor: pointer;
+            }
+
+            .css-treeview input:disabled + label {
+                cursor: default;
+                opacity: .6;
+            }
+
+            .css-treeview input:checked:not(:disabled) ~ ul {
+                display: block;
+            }
+
+            .css-treeview label,
+            .css-treeview a,
+            .css-treeview label::before {
+                display: inline-block;
+                height: 16px;
+                line-height: 16px;
+                vertical-align: middle;
+            }
+
+            .css-treeview label {
+                background-position: 18px 0;
+            }
+
+                .css-treeview label::before {
+                    content: "";
+                    width: 16px;
+                    margin: 0 22px 0 0;
+                    vertical-align: middle;
+                    background-position: 0 -32px;
+                }
+
+            .css-treeview input:checked + label::before {
+                background-position: 0 -16px;
+            }
+    </style>
+
+    <div class="css-treeview">
+        <ul>
+            <li>
+                <input type="checkbox" id="item-0" /><label for="item-0">This Folder is Closed By Default</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="item-0-0" /><label for="item-0-0">Ooops! A Nested Folder</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="item-0-0-0" /><label for="item-0-0-0">Look Ma - No Hands!</label>
+                                <ul>
+                                    <li><a href="./">First Nested Item</a></li>
+                                    <li><a href="./">Second Nested Item</a></li>
+                                    <li><a href="./">Third Nested Item</a></li>
+                                    <li><a href="./">Fourth Nested Item</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
