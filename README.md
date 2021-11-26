@@ -1,1 +1,1 @@
-# MVCFramework- Implemented IOC with repository Patter
+# MVCFramework- Implemented IOC with repository Pattern
